@@ -2,4 +2,4 @@ streamlit
 pandas
 numpy 
 sklearn
-pickle 
+pickle 3.8
