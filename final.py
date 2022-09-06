@@ -6,7 +6,7 @@ import pickle
 
 # load model
 import pickle
-loaded_model = pickle.load(open('C:/Users/thoma/Desktop/bootcamp/python/clf_pipe1.sav', 'rb'))
+loaded_model = pickle.load(open('clf_pipe1.sav', 'rb'))
 
 def predict_probability(stag,profession,traffic,coach,greywage,extraversion,independ,selfcontrol,anxiety,novator):
     prediction=loaded_model.predict_proba(data_new)[:, 1]#predictions using our model
