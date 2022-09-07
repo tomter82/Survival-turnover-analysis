@@ -10,7 +10,7 @@ import pickle
 
 # load model
 import pickle
-loaded_model = pickle.load(open('clf_pipe3.sav', 'rb'))
+loaded_model = pickle.load(open('clf_pipe5.sav', 'rb'))
 
 def predict_probability(stag,profession,traffic,coach,greywage,extraversion,independ,selfcontrol,anxiety,novator):
     prediction=loaded_model.predict_proba(data_new)[:, 1]#predictions using our model
@@ -30,9 +30,9 @@ def main():
     anxiety=st.number_input("Anxiety",0.0,10.0,5.,step =.1)
     novator=st.number_input("Innovator",0.0,10.0,5.,step =.1,help = "creativity" )
     greywage = st.selectbox("Wage",options=['contract', 'self_emp' ])
-    traffic = st.selectbox("traffic",options=['raccomented from friend' , 'advertising' ,'recruiting agency','direct contact' , 'friends' ,'raccomented from company employee','company contact','job site'])
+    traffic = st.selectbox("Contact",options=['raccomented from friend' , 'advertising' ,'recruiting agency','direct contact' , 'friends' ,'raccomented from company employee','company contact','job site'])
     coach = st.selectbox("Coach",options=['no' , 'yes' ,'my head'],help = "select if the cantidate will have a surpervisor/no supervisor /or will be a supervisor" )
-    profession=st.selectbox("Profession",options=['BusinessDevelopment','Marketing' ,'IT' ,'HR' ,'other' ,'Consult' ,'Commercial','manage','Finance','Engineer','Teaching','Accounting','Law','PR' ])
+    profession=st.selectbox("Profession area",options=['BusinessDevelopment','Marketing' ,'IT' ,'HR' ,'other' ,'Consult' ,'Commercial','manage','Finance','Engineer','Teaching','Accounting','Law','PR' ])
     
    
     import pandas as pd
