@@ -19,7 +19,7 @@ def main():
     st.title("We are hiring!") #simple title for the app
     html_temp="""
         <div>
-        <h2> Mortadella</h2>
+        <h2>    </h2>
         </div>
         """
     st.markdown(html_temp,unsafe_allow_html=True) #a simple html 
