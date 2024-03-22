@@ -44,7 +44,7 @@ def main():
    
     import pandas as pd
     data_new = pd.DataFrame({
-        #'stag':[stag],
+        'stag':[stag],
         'profession':[profession],
         'traffic':[traffic],
         'coach':[coach], 
