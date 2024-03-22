@@ -30,7 +30,7 @@ def main():
         </div>
         """
     st.markdown(html_temp,unsafe_allow_html=True) #a simple html 
-    stag=st.slider("Prevision time", 0, 180,step = 30,help = "Set the time to prediction from 1 month to 6 months")
+    stag=st.slider("Prevision time", 1, 180,step = 30,help = "Set the time to prediction from day 1 to 180")
     extraversion=st.number_input("Extraversion",0.0,10.0,5.,step =.1)
     independ=st.number_input("Independ",0.0,10.0,5.,step =.1)
     selfcontrol=st.number_input("Selfcontrol",0.0,10.0,5.,step =.1)
