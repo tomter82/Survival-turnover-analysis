@@ -23,7 +23,7 @@ def predict_probability(stag,profession,traffic,coach,greywage,extraversion,inde
     prediction=loaded_model.predict_proba(data_new)[:, 1]#predictions using our model
     return prediction 
 def main():
-    st.title("We are hiring!") #simple title for the app
+    st.title("            Probjob! ") #simple title for the app
     html_temp="""
         <div>
         <h2></h2>
