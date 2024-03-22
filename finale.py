@@ -38,7 +38,7 @@ def main():
     novator=st.number_input("Innovator",0.0,10.0,5.,step =.1,help = "creativity" )
     greywage = st.selectbox("Wage",options=['contract', 'self_emp' ])
     traffic = st.selectbox("Contact",options=['From friend' , 'Advertising' ,'Recruiting agency','Direct contact' , 'Friends in the company' , 'From company employee','Company contact','Job site'])
-    coach = st.selectbox("Coach",options=['no' , 'yes' ,'my head'],help = "select if the cantidate will have a surpervisor/no supervisor /or will be a supervisor" )
+    coach = st.selectbox("Coach",options=['no' , 'yes' ,'my head'],help = "Do you have a surpervisor/no supervisor /or you are a supervisor" )
     profession=st.selectbox("profession area ",options=['BusinessDevelopment','Marketing' ,'IT' ,'HR' ,'other' ,'Consult' ,'Commercial','manage','Finance','Engineer','Teaching','Accounting','Law','PR' ])
     
    
