@@ -67,14 +67,14 @@ def main():
     })
 
     
-    data["gender"] = data["gender"].astype("category")
-    data["profession"] = data["profession"].astype("category")
-    data["traffic"] = data["traffic"].astype("category")
-    data["coach"] = data["coach"].astype("category")
-    data["head_gender"] = data["head_gender"].astype("category")
-    data["greywage"] = data["greywage"].astype("category")
-    data["way"] = data["way"].astype("category")
-    data["industry"] = data["industry"].astype("category")
+    data_new["gender"] =  data_new["gender"].astype("category")
+    data_new["profession"] =  data_new["profession"].astype("category")
+    data_new["traffic"] =  data_new["traffic"].astype("category")
+    data_new["coach"] =  data_new["coach"].astype("category")
+    data_new["head_gender"] =  data_new["head_gender"].astype("category")
+    data_new["greywage"] =  data_new["greywage"].astype("category")
+    data_new["way"] =  data_new["way"].astype("category")
+    data_new["industry"] =  data_new["industry"].astype("category")
     
     result=""
     if st.button("Predict"):
