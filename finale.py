@@ -62,8 +62,8 @@ def main():
         'selfcontrol':[selfcontrol],
         'anxiety':[anxiety],
         'novator':[novator]
-        })
-st.dataframe(data_new)
+    })
+
     
     data_new["gender"] = data_new["gender"].astype("category")
     data_new["profession"] = data_new["profession"].astype("category")
