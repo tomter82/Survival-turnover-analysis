@@ -62,7 +62,7 @@ def main():
         'novator':[novator]
         
 })
-    data_new["gender"] = data_new["gender"].astype("category")
+    #data_new["gender"] = data_new["gender"].astype("category")
     data_new["profession"] = data_new["profession"].astype("category")
     data_new["traffic"] = data_new["traffic"].astype("category")
     data_new["coach"] = data_new["coach"].astype("category")
