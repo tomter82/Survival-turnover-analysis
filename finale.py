@@ -19,7 +19,7 @@ import pickle
 import pickle
 loaded_model = pickle.load(open('clf_pipe5.sav', 'rb'))
 
-def predict_probability(stag,gender,age,profession,traffic,coach,greywage,extraversion,independ,selfcontrol,anxiety,novator):
+def predict_probability(stag,gender,age,profession,traffic,coach,greywage,way,extraversion,independ,selfcontrol,anxiety,novator):
     prediction=loaded_model.predict_proba(data_new)[:, 1]#predictions using our model
     return prediction 
 def main():
@@ -42,7 +42,7 @@ def main():
     traffic = st.selectbox("Contact",options=['From friend' , 'Advertising' ,'Recruiting agency','Direct contact' , 'Friends in the company' , 'From company employee','Company contact','Job site'])
     coach = st.selectbox("Coach",options=['no' , 'yes' ,'my head'],help = "select if the cantidate will have a surpervisor/no supervisor /or will be a supervisor" )
     profession=st.selectbox("profession area ",options=['BusinessDevelopment','Marketing' ,'IT' ,'HR' ,'other' ,'Consult' ,'Commercial','manage','Finance','Engineer','Teaching','Accounting','Law','PR' ])
-    
+    way= st.selectbox("Way to work",options=['bus', 'car', 'foot'])
    
     import pandas as pd
     data_new = pd.DataFrame({
@@ -53,6 +53,7 @@ def main():
         'traffic':[traffic],
         'coach':[coach], 
         'greywage':[greywage],
+        'way':[way],
         'extraversion':[extraversion], 
         'independ':[independ], 
         'selfcontrol':[selfcontrol],
