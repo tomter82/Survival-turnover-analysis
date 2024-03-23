@@ -46,6 +46,7 @@ def main():
    
     import pandas as pd
     data_new = pd.DataFrame({
+        
         'stag':[stag],
         'gender':[gender],
         'age':[age],
