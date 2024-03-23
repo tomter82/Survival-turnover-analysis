@@ -32,7 +32,7 @@ def main():
     st.markdown(html_temp,unsafe_allow_html=True) #a simple html 
     gender=st.selectbox("Sex",options=['m','f'])   ##first chaange
     way=st.selectbox("How do you go to work",options=['bus', 'car', 'foot']) 
-    age=st.number_imput("age",18,65,step=1)
+    age=st.number_input("age",18,65,step=1)
     profession=st.selectbox("profession area ",options=['BusinessDevelopment','Marketing' ,'IT' ,'HR' ,'other' ,'Consult' ,'Commercial','manage','Finance','Engineer','Teaching','Accounting','Law','PR' ])
     extraversion=st.number_input("Extraversion",0.0,10.0,5.,step =.1)
     independ=st.number_input("Independ",0.0,10.0,5.,step =.1)
