@@ -54,7 +54,7 @@ def main():
         'traffic':[traffic],
         'coach':[coach], 
         'greywage':[greywage],
-        'way':[way]
+        'way':[way],
         'extraversion':[extraversion], 
         'independ':[independ], 
         'selfcontrol':[selfcontrol],
