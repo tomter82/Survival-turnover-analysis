@@ -65,7 +65,7 @@ def main():
     data_new["coach"] = data_new["coach"].astype("category")
     data_new["greywage"] = data_new["greywage"].astype("category")
     data_new["gender"] = data_new["gender"].astype("category")
-    data_new["way"] = data["way"].astype("category")
+    data_new["way"] = data_new["way"].astype("category")
 
 
     result=""
