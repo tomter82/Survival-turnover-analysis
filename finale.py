@@ -45,7 +45,7 @@ def main():
    
     import pandas as pd
     data_new = pd.DataFrame({
-        'Gender':[Gender],
+        'gender':[gender],
         'stag':[stag],
         'profession':[profession],
         'traffic':[traffic],
