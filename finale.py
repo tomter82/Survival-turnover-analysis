@@ -30,7 +30,7 @@ def main():
         </div>
         """
     st.markdown(html_temp,unsafe_allow_html=True) #a simple html 
-    sex=st.selectbox("Sex",option=['Male','Female'])   ##first chaange
+    Gender=st.selectbox("Sex",option=['Male','Female'])   ##first chaange
     profession=st.selectbox("profession area ",options=['BusinessDevelopment','Marketing' ,'IT' ,'HR' ,'other' ,'Consult' ,'Commercial','manage','Finance','Engineer','Teaching','Accounting','Law','PR' ])
     extraversion=st.number_input("Extraversion",0.0,10.0,5.,step =.1)
     independ=st.number_input("Independ",0.0,10.0,5.,step =.1)
@@ -45,6 +45,7 @@ def main():
    
     import pandas as pd
     data_new = pd.DataFrame({
+        'Gender':[Gender],
         'stag':[stag],
         'profession':[profession],
         'traffic':[traffic],
@@ -61,7 +62,9 @@ def main():
     data_new["traffic"] = data_new["traffic"].astype("category")
     data_new["coach"] = data_new["coach"].astype("category")
     data_new["greywage"] = data_new["greywage"].astype("category")
+    data_new["sex"] = data_new["sex"].astype("category")
    
+
 
     result=""
     if st.button("Predict"):
