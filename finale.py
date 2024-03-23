@@ -82,7 +82,7 @@ def main():
     
     result=""
     if st.button("Predict"):
-        result=predict_chance(stag, gender, age, industry, profession, traffic,
+        result=predict_probability(stag, gender, age, industry, profession, traffic,
         coach, head_gender, greywage, way, extraversion, independ,
         selfcontrol, anxiety, novator)
 
