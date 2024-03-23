@@ -17,7 +17,7 @@ import pickle
 
 # load model
 import pickle
-loaded_model = pickle.load(open('clf_pipe7.sav', 'rb'))
+loaded_model = pickle.load(open('clf_pipe5.sav', 'rb'))
 
 def predict_probability(stag, gender, age, profession, traffic, coach,
        greywage, way, extraversion, independ, selfcontrol, anxiety,
@@ -32,10 +32,10 @@ def main():
         </div>
         """
     st.markdown(html_temp,unsafe_allow_html=True) #a simple html 
-    gender=st.selectbox("Sex",options=['f','m'])   ##first chaange
-    way=st.selectbox("How do you go to work",options=['bus', 'car', 'foot']) 
-    age=st.number_input("age",18,65,step=1)
-    profession=st.selectbox("profession area ",options=['BusinessDevelopment','Marketing' ,'IT' ,'HR' ,'other' ,'Consult' ,'Commercial','manage','Finance','Engineer','Teaching','Accounting','Law','PR' ])
+    #gender=st.selectbox("Sex",options=['f','m'])   ##first chaange
+   # way=st.selectbox("How do you go to work",options=['bus', 'car', 'foot']) 
+    #age=st.number_input("age",18,65,step=1)
+    profession=st.selectbox("profession area ",options=['Business Development','Marketing' ,'IT' ,'HR' ,'other' ,'Consult' ,'Commercial','manage','Finance','Engineer','Teaching','Accounting','Law','PR' ])
     extraversion=st.number_input("Extraversion",0.0,10.0,5.,step =.1)
     independ=st.number_input("Independ",0.0,10.0,5.,step =.1)
     selfcontrol=st.number_input("Selfcontrol",0.0,10.0,5.,step =.1)
@@ -50,13 +50,13 @@ def main():
     import pandas as pd
     data_new = pd.DataFrame({
         'stag':[stag],
-        'gender':[gender],
-        'age':[age],
+        #'gender':[gender],
+        #'age':[age],
         'profession':[profession],
         'traffic':[traffic],
         'coach':[coach], 
         'greywage':[greywage],
-        'way':[way],
+        #'way':[way],
         'extraversion':[extraversion], 
         'independ':[independ], 
         'selfcontrol':[selfcontrol],
@@ -64,12 +64,12 @@ def main():
         'novator':[novator]        
 })
     
-    data_new["gender"] = data_new["gender"].astype("category")
+   # data_new["gender"] = data_new["gender"].astype("category")
     data_new["profession"] = data_new["profession"].astype("category")
     data_new["traffic"] = data_new["traffic"].astype("category")
     data_new["coach"] = data_new["coach"].astype("category")
     data_new["greywage"] = data_new["greywage"].astype("category")
-    data_new["way"] = data_new["way"].astype("category")
+   # data_new["way"] = data_new["way"].astype("category")
    
 
 
