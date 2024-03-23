@@ -34,14 +34,14 @@ def main():
     selfcontrol=st.slider("selfcontrol",0,10,0,1)
     anxiety=st.slider("anxiety",0,10,0,1)
     novator=st.slider("novator",0,10,0,1)
-    gender = st.selectbox("gender",options=['m' , 'f'])
-    age = st.slider("Age", 18, 54,1)
-    way = st.selectbox("way",options=['foot' , 'car' ,'bus'])
-    head_gender = st.selectbox("head_gender",options=['m' , 'f' ])
+    #gender = st.selectbox("gender",options=['m' , 'f'])
+    #age = st.slider("Age", 18, 54,1)
+    #way = st.selectbox("way",options=['foot' , 'car' ,'bus'])
+    #head_gender = st.selectbox("head_gender",options=['m' , 'f' ])
     greywage = st.selectbox("greywage",options=['white' , 'grey' ])
     traffic = st.selectbox("traffic",options=['recNErab' , 'advert' ,'KA','referal' , 'friends' ,'rabrecNErab','empjs','youjs'])
     coach = st.selectbox("coach",options=['no' , 'yes' ,'my head'])
-    industry=st.selectbox("industry",options=['Retail','manufacture' ,'IT' ,'Banks' ,'etc' ,'Consult' ,'State','Building','PowerGeneration','transport','Telecom','Mining','Pharma','Agriculture' ,'RealEstate',' HoReCa' ])
+    #industry=st.selectbox("industry",options=['Retail','manufacture' ,'IT' ,'Banks' ,'etc' ,'Consult' ,'State','Building','PowerGeneration','transport','Telecom','Mining','Pharma','Agriculture' ,'RealEstate',' HoReCa' ])
     profession=st.selectbox("profession",options=['BusinessDevelopment','Marketing' ,'IT' ,'HR' ,'etc' ,'Consult' ,'Commercial','manage','Finanñe','Engineer','Teaching','Accounting','Law','PR' ])
     
     
@@ -49,13 +49,13 @@ def main():
     import pandas as pd
     data_new = pd.DataFrame({
         'stag':[stag],
-        'gender':[gender],
-        'age':[age],
-        'industry':[industry],
+        #'gender':[gender],
+        #'age':[age],
+        #'industry':[industry],
         'profession':[profession],
         'traffic':[traffic],
         'coach':[coach], 
-        'head_gender':[head_gender],
+        #'head_gender':[head_gender],
         'greywage':[greywage],
         'way':[way],
         'extraversion':[extraversion], 
@@ -66,14 +66,14 @@ def main():
     })
 
     
-    data_new["gender"] =  data_new["gender"].astype("category")
+   # data_new["gender"] =  data_new["gender"].astype("category")
     data_new["profession"] =  data_new["profession"].astype("category")
     data_new["traffic"] =  data_new["traffic"].astype("category")
     data_new["coach"] =  data_new["coach"].astype("category")
-    data_new["head_gender"] =  data_new["head_gender"].astype("category")
+    #data_new["head_gender"] =  data_new["head_gender"].astype("category")
     data_new["greywage"] =  data_new["greywage"].astype("category")
-    data_new["way"] =  data_new["way"].astype("category")
-    data_new["industry"] =  data_new["industry"].astype("category")
+    #data_new["way"] =  data_new["way"].astype("category")
+    #data_new["industry"] =  data_new["industry"].astype("category")
     
     result=""
     if st.button("Predict"):
