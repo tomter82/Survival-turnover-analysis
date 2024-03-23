@@ -33,20 +33,24 @@ def main():
         </div>
         """
     st.markdown(html_temp,unsafe_allow_html=True) #a simple html 
-    gender=st.selectbox("Sex",options=['f', 'm' ])
-    age=st.slider("Age", 15, 67,step = 1)
-    stag=st.slider("Prevision time", 0, 180,step = 30,help = "Set the time to prediction from 1 month to 6 months")
-    extraversion=st.number_input("Extraversion",0.0,10.0,5.,step =.1)
-    independ=st.number_input("Independ",0.0,10.0,5.,step =.1)
-    selfcontrol=st.number_input("Selfcontrol",0.0,10.0,5.,step =.1)
-    anxiety=st.number_input("Anxiety",0.0,10.0,5.,step =.1)
-    novator=st.number_input("Innovator",0.0,10.0,5.,step =.1,help = "creativity" )
-    greywage = st.selectbox("Wage",options=['contract', 'self_emp' ])
-    traffic = st.selectbox("Contact",options=['From friend' , 'Advertising' ,'Recruiting agency','Direct contact' , 'Friends in the company' , 'From company employee','Company contact','Job site'])
-    coach = st.selectbox("Coach",options=['no' , 'yes' ,'my head'],help = "select if the cantidate will have a surpervisor/no supervisor /or will be a supervisor" )
-    profession=st.selectbox("profession area ",options=['BusinessDevelopment','Marketing' ,'IT' ,'HR' ,'other' ,'Consult' ,'Commercial','manage','Finance','Engineer','Teaching','Accounting','Law','PR' ])
-    way= st.selectbox("Way to work",options=['bus', 'car', 'foot'])
+    stag=st.slider("stag", 0, 180,1)
+    extraversion=st.slider("extraversion",0,10,0,1)
+    independ=st.slider("independ",0,10,0,1)
+    selfcontrol=st.slider("selfcontrol",0,10,0,1)
+    anxiety=st.slider("anxiety",0,10,0,1)
+    novator=st.slider("novator",0,10,0,1)
+    gender = st.selectbox("gender",options=['m' , 'f'])
+    age = st.slider("Age", 18, 54,1)
+    way = st.selectbox("way",options=['foot' , 'car' ,'bus'])
+    head_gender = st.selectbox("head_gender",options=['m' , 'f' ])
+    greywage = st.selectbox("greywage",options=['white' , 'grey' ])
+    traffic = st.selectbox("traffic",options=['recNErab' , 'advert' ,'KA','referal' , 'friends' ,'rabrecNErab','empjs','youjs'])
+    coach = st.selectbox("coach",options=['no' , 'yes' ,'my head'])
     industry=st.selectbox("industry",options=['Retail','manufacture' ,'IT' ,'Banks' ,'etc' ,'Consult' ,'State','Building','PowerGeneration','transport','Telecom','Mining','Pharma','Agriculture' ,'RealEstate',' HoReCa' ])
+    profession=st.selectbox("profession",options=['BusinessDevelopment','Marketing' ,'IT' ,'HR' ,'etc' ,'Consult' ,'Commercial','manage','Finanñe','Engineer','Teaching','Accounting','Law','PR' ])
+    
+    
+    
     import pandas as pd
     data_new = pd.DataFrame({
         'stag':[stag],
