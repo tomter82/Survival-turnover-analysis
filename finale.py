@@ -9,7 +9,7 @@ regressor=pickle.load(pickle_a) # our model
 def predict_chance(stag, gender, age, industry, profession, traffic,
        coach, head_gender, greywage, way, extraversion, independ,
        selfcontrol, anxiety, novator):
-    prediction=regressor.predict([[stag, gender, age, industry, profession, traffic,
+    prediction=regressor.predict([[stag, event, gender, age, industry, profession, traffic,
        coach, head_gender, greywage, way, extraversion, independ,
        selfcontrol, anxiety, novator]]) #predictions using our model
     return prediction 
