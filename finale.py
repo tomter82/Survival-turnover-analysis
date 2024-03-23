@@ -62,7 +62,7 @@ def main():
         'selfcontrol':[selfcontrol],
         'anxiety':[anxiety],
         'novator':[novator]
-})
+        })
 
     
     data_new["gender"] = data_new["gender"].astype("category")
