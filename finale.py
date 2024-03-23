@@ -52,11 +52,11 @@ def main():
         'stag':[stag],
         'gender':[gender],
         'age':[age],
-        'industry':[industry]
+        'industry':[industry],
         'profession':[profession],
         'traffic':[traffic],
         'coach':[coach], 
-        'head_gender':[head_gender]
+        'head_gender':[head_gender],
         'greywage':[greywage],
         'way':[way],
         'extraversion':[extraversion], 
