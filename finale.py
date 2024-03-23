@@ -65,6 +65,7 @@ def main():
     data_new["traffic"] = data_new["traffic"].astype("category")
     data_new["coach"] = data_new["coach"].astype("category")
     data_new["greywage"] = data_new["greywage"].astype("category")
+    data_new["way"] = data_new["way"].astype("category") 
     result=""
     if st.button("Predict"):
         #prediction=loaded_model.predict_proba(data_new)[:, 1]
