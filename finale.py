@@ -15,8 +15,8 @@ from sklearn.metrics import log_loss, roc_auc_score, recall_score, precision_sco
 
 # load model
 import pickle
-#loaded_model = pickle.load(open('clf_pipe5.sav', 'rb'))
-loaded_model = pickle.load(open('saver.p', 'rb'))
+loaded_model = pickle.load(open('clf_pipe5.sav', 'rb'))
+#loaded_model = pickle.load(open('saver.p', 'rb'))
 def predict_probability(stag,gender,age,industry,profession,traffic,coach,head_gender,greywage,way,extraversion,independ,selfcontrol,anxiety,novator):
     prediction=loaded_model.predict_proba(data_new)[:, 1]#predictions using our model
     return prediction 
