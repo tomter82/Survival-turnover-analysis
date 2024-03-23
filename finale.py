@@ -18,8 +18,8 @@ import pickle
 # load model
 import pickle
 #loaded_model = pickle.load(open('clf_pipe5.sav', 'rb'))
-loaded_model = pickle.load(open('save.p', 'rb'))
-def predict_probability(stag,gender,age,profession,traffic,coach,greywage,way,extraversion,independ,selfcontrol,anxiety,novator):
+loaded_model = pickle.load(open('saver.p', 'rb'))
+def predict_probability(stag,gender,age,industry,profession,traffic,coach,head_gender,greywage,way,extraversion,independ,selfcontrol,anxiety,novator):
 
 
     
@@ -52,9 +52,11 @@ def main():
         'stag':[stag],
         'gender':[gender],
         'age':[age],
+        'industry':[industry]
         'profession':[profession],
         'traffic':[traffic],
         'coach':[coach], 
+        'head_gender':[head_gender]
         'greywage':[greywage],
         'way':[way],
         'extraversion':[extraversion], 
