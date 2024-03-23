@@ -82,8 +82,13 @@ def main():
     
     result=""
     if st.button("Predict"):
+        result=predict_chance(stag, gender, age, industry, profession, traffic,
+        coach, head_gender, greywage, way, extraversion, independ,
+        selfcontrol, anxiety, novator)
+
+        
         #prediction=loaded_model.predict_proba(data_new)[:, 1]
-        result=loaded_model.predict_proba(data_new)[:, 1].round(3)*100   #result will be displayed if pressed
+        #result=loaded_model.predict_proba(data_new)[:, 1].round(3)*100   #result will be displayed if pressed
     st.success("Based on your profile ,your probability to still working in the Company is {}%" .format(result))
     
 if __name__=='__main__':
