@@ -47,10 +47,9 @@ def main():
    
     import pandas as pd
     data_new = pd.DataFrame({
-        'gender':[gender],
-        'age':[age],
-        'way':[way],
         'stag':[stag],
+        'age':[age],
+        'gender':[gender],
         'profession':[profession],
         'traffic':[traffic],
         'coach':[coach], 
@@ -59,7 +58,8 @@ def main():
         'independ':[independ], 
         'selfcontrol':[selfcontrol],
         'anxiety':[anxiety],
-        'novator':[novator]
+        'novator':[novator],
+        'way':[way]
 })
 
     data_new["profession"] = data_new["profession"].astype("category")
