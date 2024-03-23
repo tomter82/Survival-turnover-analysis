@@ -30,7 +30,7 @@ def main():
         </div>
         """
     st.markdown(html_temp,unsafe_allow_html=True) #a simple html 
-    gender=st.selectbox("Sex",option=['Male','Female'])   ##first chaange
+    gender=st.selectbox("Sex",options=['Male','Female'])   ##first chaange
     profession=st.selectbox("profession area ",options=['BusinessDevelopment','Marketing' ,'IT' ,'HR' ,'other' ,'Consult' ,'Commercial','manage','Finance','Engineer','Teaching','Accounting','Law','PR' ])
     extraversion=st.number_input("Extraversion",0.0,10.0,5.,step =.1)
     independ=st.number_input("Independ",0.0,10.0,5.,step =.1)
