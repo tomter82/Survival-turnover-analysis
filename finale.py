@@ -19,7 +19,7 @@ import pickle
 import pickle
 loaded_model = pickle.load(open('clf_pipe6.sav', 'rb'))
 
-def predict_probability(stag,age,gender,profession,traffic,coach,greywage,extraversion,independ,selfcontrol,anxiety,novator,way):
+def predict_probability(stag,age,gender,profession,traffic,coach,greywage,way,extraversion,independ,selfcontrol,anxiety,novator):
     prediction=loaded_model.predict_proba(data_new)[:, 1]#predictions using our model
     return prediction 
 def main():
@@ -54,12 +54,13 @@ def main():
         'traffic':[traffic],
         'coach':[coach], 
         'greywage':[greywage],
+        'way':[way]
         'extraversion':[extraversion], 
         'independ':[independ], 
         'selfcontrol':[selfcontrol],
         'anxiety':[anxiety],
         'novator':[novator],
-        'way':[way]
+        
 })
     data_new["gender"] = data_new["gender"].astype("category")
     data_new["profession"] = data_new["profession"].astype("category")
