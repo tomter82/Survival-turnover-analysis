@@ -20,10 +20,7 @@ import pickle
 #loaded_model = pickle.load(open('clf_pipe5.sav', 'rb'))
 loaded_model = pickle.load(open('logit.pkl', 'rb'))
 def predict_probability(stag,gender,age,industry,profession,traffic,coach,head_gender,greywage,way,extraversion,independ,selfcontrol,anxiety,novator):
-
-
-    
-    prediction=loaded_model.predict_proba(data_new)[:, 1]#predictions using our model
+    prediction=loaded_model.predict_probability(data_new)[:, 1]#predictions using our model
     return prediction 
 def main():
     st.title("We are hiring!") #simple title for the app
@@ -82,7 +79,7 @@ def main():
     
     result=""
     if st.button("Predict"):
-        result=predict_probability(stag, gender, age, industry, profession, traffic,coach, head_gender, greywage, way, extraversion, independ, selfcontrol, anxiety, novator)
+       # result=predict_probability(stag, gender, age, industry, profession, traffic,coach, head_gender, greywage, way, extraversion, independ, selfcontrol, anxiety, novator)
 
         
         prediction=loaded_model.predict_proba(data_new)[:, 1]
