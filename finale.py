@@ -12,8 +12,6 @@ from sklearn.pipeline import make_pipeline
 from sklearn.linear_model import LogisticRegression
 from sklearn import datasets, metrics, model_selection, svm
 from sklearn.metrics import log_loss, roc_auc_score, recall_score, precision_score, average_precision_score, f1_score, classification_report, accuracy_score
-import pickle 
-import pickle 
 
 # load model
 import pickle
