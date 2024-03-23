@@ -30,7 +30,7 @@ def main():
         </div>
         """
     st.markdown(html_temp,unsafe_allow_html=True) #a simple html 
-    gender=st.selectbox("Sex",options=['m','f'])   ##first chaange
+    gender=st.selectbox("Sex",options=['f', 'm'])   ##first chaange
     way=st.selectbox("How do you go to work",options=['bus', 'car', 'foot']) 
     age=st.number_input("age",18,65,step=1)
     profession=st.selectbox("profession area ",options=['BusinessDevelopment','Marketing' ,'IT' ,'HR' ,'other' ,'Consult' ,'Commercial','manage','Finance','Engineer','Teaching','Accounting','Law','PR' ])
@@ -68,6 +68,7 @@ def main():
     data_new["greywage"] = data_new["greywage"].astype("category")
     data_new["gender"] = data_new["gender"].astype("category")
     data_new["way"] = data_new["way"].astype("category")
+     data_new["age"] = data_new["age"].astype("category")
 
 
     result=""
