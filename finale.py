@@ -19,7 +19,7 @@ import pickle
 import pickle
 loaded_model = pickle.load(open('clf_pipe5.sav', 'rb'))
 
-def predict_probability(stag, profession, traffic, coach,greywage, extraversion, independ, selfcontrol, anxiety,novator):
+def predict_probability(stag,profession,traffic,coach,greywage,extraversion,independ,selfcontrol,anxiety,novator):
     prediction=loaded_model.predict_proba(data_new)[:, 1]#predictions using our model
     return prediction 
 def main():
@@ -31,7 +31,7 @@ def main():
         """
     st.markdown(html_temp,unsafe_allow_html=True) #a simple html 
     #gender=st.selectbox("Sex",options=['f','m'])   ##first chaange
-   # way=st.selectbox("How do you go to work",options=['bus', 'car', 'foot']) 
+    #way=st.selectbox("How do you go to work",options=['bus', 'car', 'foot']) 
     #age=st.number_input("age",18,65,step=1)
     profession=st.selectbox("profession area ",options=['Business Development','Marketing' ,'IT' ,'HR' ,'other' ,'Consult' ,'Commercial','manage','Finance','Engineer','Teaching','Accounting','Law','PR' ])
     extraversion=st.number_input("Extraversion",0.0,10.0,5.,step =.1)
