@@ -19,7 +19,7 @@ import pickle
 import pickle
 loaded_model = pickle.load(open('clf_pipe5.sav', 'rb'))
 
-def predict_probability(stag,gender,profession,traffic,coach,greywage,extraversion,independ,selfcontrol,anxiety,novator):
+def predict_probability(stag,gender,age,profession,traffic,coach,greywage,extraversion,independ,selfcontrol,anxiety,novator):
     prediction=loaded_model.predict_proba(data_new)[:, 1]#predictions using our model
     return prediction 
 def main():
@@ -31,6 +31,7 @@ def main():
         """
     st.markdown(html_temp,unsafe_allow_html=True) #a simple html 
     gender=st.selectbox("Sex",options=['f', 'm' ])
+    age=st.slider("Age", 15, 67,step = 1)
     stag=st.slider("Prevision time", 0, 180,step = 30,help = "Set the time to prediction from 1 month to 6 months")
     extraversion=st.number_input("Extraversion",0.0,10.0,5.,step =.1)
     independ=st.number_input("Independ",0.0,10.0,5.,step =.1)
@@ -47,6 +48,7 @@ def main():
     data_new = pd.DataFrame({
         'stag':[stag],
         'gender':[gender],
+        'age':[age],
         'profession':[profession],
         'traffic':[traffic],
         'coach':[coach], 
