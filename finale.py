@@ -19,7 +19,7 @@ import pickle
 import pickle
 loaded_model = pickle.load(open('clf_pipe5.sav', 'rb'))
 
-def predict_probability(stag,profession,traffic,coach,greywage,extraversion,independ,selfcontrol,anxiety,novator):
+def predict_probability(stag,gender,profession,traffic,coach,greywage,extraversion,independ,selfcontrol,anxiety,novator):
     prediction=loaded_model.predict_proba(data_new)[:, 1]#predictions using our model
     return prediction 
 def main():
@@ -30,6 +30,7 @@ def main():
         </div>
         """
     st.markdown(html_temp,unsafe_allow_html=True) #a simple html 
+    gender=st.selectionbox("Sex",options=['f', 'm' ])
     stag=st.slider("Prevision time", 0, 180,step = 30,help = "Set the time to prediction from 1 month to 6 months")
     extraversion=st.number_input("Extraversion",0.0,10.0,5.,step =.1)
     independ=st.number_input("Independ",0.0,10.0,5.,step =.1)
@@ -45,6 +46,7 @@ def main():
     import pandas as pd
     data_new = pd.DataFrame({
         'stag':[stag],
+        'gender':[gender],
         'profession':[profession],
         'traffic':[traffic],
         'coach':[coach], 
@@ -55,7 +57,7 @@ def main():
         'anxiety':[anxiety],
         'novator':[novator]
 })
-
+    data_new["gender"] = data_new["gender"].astype("category")
     data_new["profession"] = data_new["profession"].astype("category")
     data_new["traffic"] = data_new["traffic"].astype("category")
     data_new["coach"] = data_new["coach"].astype("category")
