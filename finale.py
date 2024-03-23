@@ -46,7 +46,7 @@ def main():
     coach = st.selectbox("Coach",options=['no' , 'yes' ,'my head'],help = "select if the cantidate will have a surpervisor/no supervisor /or will be a supervisor" )
     profession=st.selectbox("profession area ",options=['BusinessDevelopment','Marketing' ,'IT' ,'HR' ,'other' ,'Consult' ,'Commercial','manage','Finance','Engineer','Teaching','Accounting','Law','PR' ])
     way= st.selectbox("Way to work",options=['bus', 'car', 'foot'])
-    industry=st.selectbox("Settore",optiones=[])
+    industry=st.selectbox("industry",options=['Retail','manufacture' ,'IT' ,'Banks' ,'etc' ,'Consult' ,'State','Building','PowerGeneration','transport','Telecom','Mining','Pharma','Agriculture' ,'RealEstate',' HoReCa' ])
     import pandas as pd
     data_new = pd.DataFrame({
         'stag':[stag],
