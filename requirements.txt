@@ -2,6 +2,6 @@ streamlit==1.12.0
 pandas==1.4.2
 numpy==1.26.4
 scikit-learn==1.1.2
-scikit-survival==0,18,0
+scikit-survival==0.18.0
 
 
