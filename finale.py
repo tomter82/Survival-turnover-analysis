@@ -33,7 +33,7 @@ def main():
     gender=st.selectbox("Sex",options=['f', 'm' ])
     age=st.slider("Age", 15, 67,step = 1)
     profession=st.selectbox("Professional area ",options=['BusinessDevelopment','Marketing' ,'IT' ,'HR' ,'other' ,'Consult' ,'Commercial','manage','Finance','Engineer','Teaching','Accounting','Law','PR'  ])
-    coach = st.selectbox("Coach",options=['no' , 'yes' ,'my head'],help = "select if the cantidate will have a surpervisor/no supervisor /or will be a supervisor" )
+    coach = st.selectbox("Coach",options=['no' , 'yes' ,'my head'],help = "Do You have a coach or do you work as a coach?" )
     greywage = st.selectbox("Wage",options=['contract', 'self_emp' ])
     way= st.selectbox("Way to work",options=['bus', 'car', 'foot'])
     extraversion=st.number_input("Extraversion",0.0,10.0,5.,step =.1)
