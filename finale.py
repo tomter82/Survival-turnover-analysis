@@ -57,7 +57,7 @@ def main():
         'coach':[coach], 
         #'head_gender':[head_gender],
         'greywage':[greywage],
-        'way':[way],
+        #'way':[way],
         'extraversion':[extraversion], 
         'independ':[independ], 
         'selfcontrol':[selfcontrol],
