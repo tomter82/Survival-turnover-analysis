@@ -41,7 +41,7 @@ def main():
     selfcontrol=st.number_input("Selfcontrol",0.0,10.0,5.,step =.1)
     anxiety=st.number_input("Anxiety",0.0,10.0,5.,step =.1)
     novator=st.number_input("Innovator",0.0,10.0,5.,step =.1,help = "creativity" )
-    traffic = st.selectbox("Contact",options=['From friend' , 'Advertising' ,'Recruiting agency','Direct contact' , 'Friends in the company' , 'From company employee','Company contact','Job site'])
+    traffic = st.selectbox("Contact",options=['From friend' , 'Advertising' ,'Recruiting agency','Direct contact' , 'Friends in the company' , 'From company employee','Company contact','Job site'],help = "How did you hear about the position")
     stag=st.slider("Prevision time", 0, 180,step = 30,help = "Set the time to predict")
     import pandas as pd
     data_new = pd.DataFrame({
