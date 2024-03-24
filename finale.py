@@ -29,7 +29,17 @@ def main():
         <h2></h2>
         </div>
         """
-    st.markdown(html_temp,unsafe_allow_html=True) #a simple html 
+    #st.markdown(html_temp,unsafe_allow_html=True) #a simple html 
+    st.markdown("""
+<style>
+body {
+    color: #fff;
+    background-color: #111;
+}
+</style>
+    """, unsafe_allow_html=True)
+
+    
     gender=st.selectbox("Sex",options=['f', 'm' ])
     age=st.slider("Age", 15, 67,step = 1)
     profession=st.selectbox("Professional area ",options=['BusinessDevelopment','Marketing' ,'IT' ,'HR' ,'other' ,'Consult' ,'Commercial','manage','Finance','Engineer','Teaching','Accounting','Law','PR'  ])
