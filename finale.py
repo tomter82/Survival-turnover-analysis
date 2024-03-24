@@ -17,7 +17,7 @@ import pickle
 
 # load model
 import pickle
-loaded_model = pickle.load(open('clf_pipe.sav', 'rb'))
+loaded_model = pickle.load(open('clf_pipe5.sav', 'rb'))
 #loaded_model = pickle.load(open('logit1.pkl', 'rb'))
 def predict_probability(stag,gender ,age,profession,traffic,coach,greywage,way,extraversion,independ,selfcontrol,anxiety,novator):
     prediction=loaded_model.predict_proba(data_new)[:, 1]#predictions using our model
