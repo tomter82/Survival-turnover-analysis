@@ -33,16 +33,15 @@ def main():
     gender=st.selectbox("Sex",options=['f', 'm' ])
     age=st.slider("Age", 15, 67,step = 1)
     profession=st.selectbox("profession area ",options=['BusinessDevelopment','Marketing' ,'IT' ,'HR' ,'other' ,'Consult' ,'Commercial','manage','Finance','Engineer','Teaching','Accounting','Law','PR'  ])
+    coach = st.selectbox("Coach",options=['no' , 'yes' ,'my head'],help = "select if the cantidate will have a surpervisor/no supervisor /or will be a supervisor" )
+    greywage = st.selectbox("Wage",options=['contract', 'self_emp' ])
+    way= st.selectbox("Way to work",options=['bus', 'car', 'foot'])
     extraversion=st.number_input("Extraversion",0.0,10.0,5.,step =.1)
     independ=st.number_input("Independ",0.0,10.0,5.,step =.1)
     selfcontrol=st.number_input("Selfcontrol",0.0,10.0,5.,step =.1)
     anxiety=st.number_input("Anxiety",0.0,10.0,5.,step =.1)
     novator=st.number_input("Innovator",0.0,10.0,5.,step =.1,help = "creativity" )
-    greywage = st.selectbox("Wage",options=['contract', 'self_emp' ])
     traffic = st.selectbox("Contact",options=['From friend' , 'Advertising' ,'Recruiting agency','Direct contact' , 'Friends in the company' , 'From company employee','Company contact','Job site'])
-    coach = st.selectbox("Coach",options=['no' , 'yes' ,'my head'],help = "select if the cantidate will have a surpervisor/no supervisor /or will be a supervisor" )
-   
-    way= st.selectbox("Way to work",options=['bus', 'car', 'foot'])
     stag=st.slider("Prevision time", 0, 180,step = 30,help = "Set the time to prediction from 1 month to 6 months")
     import pandas as pd
     data_new = pd.DataFrame({
