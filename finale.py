@@ -20,7 +20,7 @@ import pickle
 #loaded_model = pickle.load(open('clf_pipe5.sav', 'rb'))
 loaded_model = pickle.load(open('clf_pip.sav', 'rb'))
 def predict_probability(stag,gender,age,profession,traffic,coach,greywage,way,extraversion,independ,selfcontrol,anxiety,novator):
-    prediction=loaded_model.predict_proba(data_new)[:, 1]#predictions using our model
+    prediction=loaded_model.test_prob(data_new)[:, 1]#predictions using our model
     return prediction 
 def main():
     st.title("We are hiring!") #simple title for the app
@@ -72,7 +72,7 @@ def main():
     result=""
     if st.button("Predict"):
         #prediction=loaded_model.predict_proba(data_new)[:, 1]
-        result=loaded_model.predict_proba(data_new)[:, 1].round(3)*100   #result will be displayed if pressed
+        result=loaded_model.test_prob(data_new)[:, 1].round(3)*100   #result will be displayed if pressed
     st.success("Based on your profile ,your probability to still working in the Company is {}%" .format(result))
     
 if __name__=='__main__':
