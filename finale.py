@@ -73,7 +73,7 @@ def main():
     if st.button("Predict"):
         #prediction=loaded_model.predict_proba(data_new)[:, 1]
         result=loaded_model.predict_proba(data_new)[:, 1].round(3)*100   #result will be displayed if pressed
-    st.success("Based on your characteristics, the probability of termination of employment with the company is {}%" .format(result))
+    st.success("Based on your characteristics, the probability of still workong with the company is {}%" .format(result))
     
 if __name__=='__main__':
     main()
